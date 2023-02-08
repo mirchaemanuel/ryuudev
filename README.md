@@ -3,3 +3,29 @@
 # ryuudev
 
 Ryuujin's dev environment
+
+## Usage
+
+Build the Docker image
+
+```
+docker build -t ryuudev docker/phpdev
+```
+
+Start PHP:
+
+```
+docker run -it --rm -v $(pwd):/data ryuudev php "$@"
+```
+
+Start composer:
+
+```
+docker run -it --rm -v $(pwd):/data ryuudev composer "$@"
+```
+
+Start the environment with Zsh:
+
+```
+docker run -it --rm -v $(pwd):/data ryuudev zsh
+```
