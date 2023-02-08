@@ -25,6 +25,8 @@ RUN    apt-get -y --no-install-recommends install \
 	php8.1-sqlite3 \
 	mcrypt;
 
+RUN apt-get install -y vim
+
 RUN apt-get install -y nodejs
 
 RUN apt-get clean; \
@@ -40,6 +42,9 @@ RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -
 RUN touch ~/.zshrc
 
 RUN sed -i 's/ash/zsh/g' /etc/passwd
+
+# ENV FILES
+COPY env_files/dot_vimrc "/root/.vimrc"
 
 RUN mkdir /data
 
