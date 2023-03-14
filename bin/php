@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run -it --rm -v $(pwd):/data ryuudev php "$@"
+docker run -it --rm -v "$(pwd):/data" ryuudev php "$@"

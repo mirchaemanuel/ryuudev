@@ -21,6 +21,7 @@ RUN    apt-get -y --no-install-recommends install \
         php8.1-yaml \
 	php8.1-dom \
 	php8.1-xml \
+	php8.1-curl \
 	libmcrypt-dev \
 	php8.1-sqlite3 \
 	mcrypt;
